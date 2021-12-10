@@ -107,7 +107,7 @@ export default {
       const columns = [
         {label: 'Status', field: 'status'},
         {label: this.$t('Name'), field: 'name', truncate: true},
-        {label: this.$t('Stock Test 1'), field: 'stock'},
+        {label: this.$t('Stock Test 2'), field: 'stock'},
         {label: this.$t('Channels'), field: 'channels'},
         {label: this.$t('Customer Groups'), field: 'customer-groups'},
         {label: this.$t('Purchasable'), field: 'customer-groups'},
