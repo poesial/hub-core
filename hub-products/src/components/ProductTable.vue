@@ -47,11 +47,11 @@
     <template v-slot:stock="{ row }">
       <edit-stock :product="row" />
     </template>
-    <template v-slot:channels="{ row }">
-      {{ visibility(row, 'channels') }}
+    <template v-slot:price="{ row }">
+      {{ row.variants.data[0].price }}
     </template>
     <template v-slot:customer-groups="{ row }">
-      {{ visibility(row, 'customer_groups') }}
+      (Coming soon)
     </template>
     <template v-slot:purchasable="{ row }">
       <span class="tag is-success-table">{{ purchasable(row, 'customer_groups') }}</span>
@@ -107,10 +107,9 @@ export default {
       const columns = [
         {label: 'Status', field: 'status'},
         {label: this.$t('Name'), field: 'name', truncate: true},
-        {label: this.$t('Stock Test 4'), field: 'stock'},
-        {label: this.$t('Channels'), field: 'channels'},
-        {label: this.$t('Customer Groups'), field: 'customer-groups'},
-        {label: this.$t('Purchasable'), field: 'customer-groups'},
+        {label: this.$t('Stock'), field: 'stock'},
+        {label: this.$t('Price'), field: 'price'},
+        {label: this.$t('Discounts available'), field: 'customer-groups'},
       ];
 
       if (this.checkable) {

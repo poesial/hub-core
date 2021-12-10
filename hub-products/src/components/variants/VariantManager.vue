@@ -113,6 +113,21 @@
                   </option>
                 </select-input>
               </form-field>
+              <form-field :label="$t('Cost')">
+                <gc-input v-model="current.cost" :is-cents="false" @input="handleChange" />
+              </form-field>
+              <form-field :label="$t('Import Tax')">
+                <gc-input v-model="current.import_tax" type="number" @input="handleChange" />
+              </form-field>
+              <form-field :label="$t('Inward shipping cost')">
+                <gc-input v-model="current.inward_shipping_cost" :is-cents="false" @input="handleChange" />
+              </form-field>
+              <form-field :label="$t('Margin')">
+                <gc-input v-model="current.margin" type="number" @input="handleChange" />
+              </form-field>
+              <form-field :label="$t('Profit')">
+                <gc-input v-model="current.profit" type="number" @input="handleChange" />
+              </form-field>
             </div>
           </div>
         </div>
@@ -155,6 +170,12 @@
                   </option>
                 </gc-select-input>
               </gc-form-field>
+              <form-field :label="$t('Date Of Arrival')">
+                <gc-input v-model="current.replenishment_arrival_date" type="date" @input="handleChange" />
+              </form-field>
+              <form-field :label="$t('Units')">
+                <gc-input v-model="current.replenishment_units" input-type="text" @input="handleChange" />
+              </form-field>
             </div>
           </div>
         </div>
@@ -210,6 +231,18 @@
                     </option>
                     <option value="m">
                       M
+                    </option>
+                  </select>
+                </gc-grouped-input>
+              </form-field>
+              <form-field :label="$t('Weight')">
+                <gc-grouped-input v-model="current.weight.value" @input="handleChange" input-type="number">
+                  <select v-model="current.weight.unit" class="h-full py-0 pl-2 text-gray-500 bg-transparent border-transparent form-select pr-7 sm:text-sm sm:leading-5" @change="handleChange">
+                    <option value="kg">
+                      KG
+                    </option>
+                    <option value="g">
+                      G
                     </option>
                   </select>
                 </gc-grouped-input>

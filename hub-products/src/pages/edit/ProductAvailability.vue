@@ -182,7 +182,14 @@ export default {
         backorder: variant.backorder,
         pricing: variant.customer_pricing.data,
         tiers: [],
-        options: variant.options
+        options: variant.options,
+        cost: variant.cost,
+        import_tax: variant.import_tax,
+        inward_shipping_cost: variant.inward_shipping_cost,
+        margin: variant.margin,
+        profit: variant.profit,
+        replenishment_arrival_date: variant.replenishment_arrival_date,
+        replenishment_units: variant.replenishment_units,
       }
 
       if (variant.tiers.data.length) {
