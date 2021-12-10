@@ -1,6 +1,6 @@
 {
   "name": "@poesial/hub-products",
-  "version": "0.12.28",
+  "version": "0.12.29",
   "description": "",
   "main": "src/module.js",
   "scripts": {
