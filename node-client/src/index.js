@@ -100,6 +100,7 @@ export default class GetCandy {
     this.versions = new Versions(this)
     // this.blogs = new Blogs(this)
     // this.blogFamilies = new BlogFamilies(this)
+    // this.blogVariants = new BlogFamilies(this)
   }
 }
 // const utils = require('./utils');
