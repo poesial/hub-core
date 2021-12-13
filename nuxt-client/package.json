@@ -1,6 +1,6 @@
 {
   "name": "@poesial/nuxt-client",
-  "version": "0.12.38",
+  "version": "0.12.39",
   "description": "",
   "main": "src/module.js",
   "scripts": {
@@ -18,6 +18,6 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
-    "@poesial/js-client": "^0.12.35"
+    "@poesial/js-client": "^0.12.39"
   }
 }
