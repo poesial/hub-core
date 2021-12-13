@@ -99,6 +99,7 @@ export default class GetCandy {
     this.users = new Users(this)
     this.versions = new Versions(this)
     // this.blogs = new Blogs(this)
+    // this.blogFamilies = new BlogFamilies(this)
   }
 }
 // const utils = require('./utils');
