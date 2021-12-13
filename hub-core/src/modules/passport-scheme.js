@@ -1,4 +1,4 @@
-import HubUser from '@getcandy/hub-core/src/modules/HubUser.js'
+import HubUser from '@poesial/hub-core/src/modules/HubUser.js'
 export default class PassportScheme {
   constructor (auth, options) {
     this.$auth = auth

@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import HubPage from '@getcandy/hub-core/src/mixins/HubPage.js'
-import NormalizesObjects from '@getcandy/hub-core/src/mixins/NormalizesObjects.js'
-import HasDrafts from '@getcandy/hub-core/src/mixins/HasDrafts.js'
+import HubPage from '@poesial/hub-core/src/mixins/HubPage.js'
+import NormalizesObjects from '@poesial/hub-core/src/mixins/NormalizesObjects.js'
+import HasDrafts from '@poesial/hub-core/src/mixins/HasDrafts.js'
 
 const debounce = require('lodash/debounce')
 const orderBy = require('lodash/orderBy')

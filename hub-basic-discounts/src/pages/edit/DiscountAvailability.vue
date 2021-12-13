@@ -18,7 +18,7 @@
 </template>
 
 <script>
-  import NormalizesObjects from '@getcandy/hub-core/src/mixins/NormalizesObjects.js'
+  import NormalizesObjects from '@poesial/hub-core/src/mixins/NormalizesObjects.js'
 
   export default {
     layout: 'discount',

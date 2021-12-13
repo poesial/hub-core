@@ -12,8 +12,8 @@
 </template>
 
 <script>
-  import NormalizesObjects from '@getcandy/hub-core/src/mixins/NormalizesObjects.js'
-  import HasDrafts from '@getcandy/hub-core/src/mixins/HasDrafts.js'
+  import NormalizesObjects from '@poesial/hub-core/src/mixins/NormalizesObjects.js'
+  import HasDrafts from '@poesial/hub-core/src/mixins/HasDrafts.js'
 
   export default {
     layout: 'collection',

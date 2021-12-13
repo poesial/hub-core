@@ -1,0 +1,12 @@
+{
+  "name": "@poesial/node-client",
+  "version": "0.10.2",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "gitHead": "6010e4c5b7789ad64de704e608723b2e84916537"
+}

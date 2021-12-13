@@ -13,7 +13,7 @@
 
 <script>
   const debounce = require('lodash/debounce')
-  import { HubPage, NormalizesObjects, HasDrafts } from '@getcandy/hub-core/src/mixins/Index.js'
+  import { HubPage, NormalizesObjects, HasDrafts } from '@poesial/hub-core/src/mixins/Index.js'
 
   export default {
     layout: 'collection',

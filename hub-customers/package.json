@@ -1,5 +1,5 @@
 {
-  "name": "@getcandy/hub-customers",
+  "name": "@poesial/hub-customers",
   "version": "0.12.22",
   "description": "",
   "main": "src/module.js",
@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@getcandy/hub-core": "^0.12.22"
+    "@poesial/hub-core": "^0.12.22"
   },
   "gitHead": "44affbe58a8b08c34f3a9d41459d8db89df5f387"
 }

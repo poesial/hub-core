@@ -50,7 +50,7 @@
 
 <script>
 import moment from 'moment'
-import MetricBadge from '@getcandy/hub-orders/src/components/MetricBadge'
+import MetricBadge from '@poesial/hub-orders/src/components/MetricBadge'
 import UserSpending from './UserSpending'
 import PurchaseHistory from './PurchaseHistory'
 

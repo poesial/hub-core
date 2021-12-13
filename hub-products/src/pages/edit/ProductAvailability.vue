@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { HubPage, NormalizesObjects, HasDrafts } from '@getcandy/hub-core/src/mixins/Index.js'
+import { HubPage, NormalizesObjects, HasDrafts } from '@poesial/hub-core/src/mixins/Index.js'
 import VariantManager from '../../components/variants/VariantManager.vue'
 import VariantOptions from '../../components/variants/VariantOptions.vue'
 

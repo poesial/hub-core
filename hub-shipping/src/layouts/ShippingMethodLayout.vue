@@ -23,9 +23,9 @@ const each = require('lodash/each')
 const find = require('lodash/find')
 const map = require('lodash/map')
 
-import DefaultLayout from '@getcandy/hub-core/src/layouts/Default.vue'
-import HasAttributes from '@getcandy/hub-core/src/mixins/HasAttributes'
-import NormalizesObjects from '@getcandy/hub-core/src/mixins/NormalizesObjects.js'
+import DefaultLayout from '@poesial/hub-core/src/layouts/Default.vue'
+import HasAttributes from '@poesial/hub-core/src/mixins/HasAttributes'
+import NormalizesObjects from '@poesial/hub-core/src/mixins/NormalizesObjects.js'
 
 export default {
   components: {

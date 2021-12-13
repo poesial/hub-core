@@ -15,9 +15,9 @@
 </template>
 
 <script>
-import DefaultLayout from '@getcandy/hub-core/src/layouts/Default.vue'
-import NormalizesObjects from '@getcandy/hub-core/src/mixins/NormalizesObjects.js'
-import HasAttributes from '@getcandy/hub-core/src/mixins/HasAttributes'
+import DefaultLayout from '@poesial/hub-core/src/layouts/Default.vue'
+import NormalizesObjects from '@poesial/hub-core/src/mixins/NormalizesObjects.js'
+import HasAttributes from '@poesial/hub-core/src/mixins/HasAttributes'
 const map = require('lodash/map')
 
 export default {

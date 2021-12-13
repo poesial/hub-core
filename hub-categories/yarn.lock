@@ -1125,13 +1125,13 @@
     postcss "7.0.32"
     purgecss "^2.3.0"
 
-"@getcandy/hub-core@^0.11.6":
+"@poesial/hub-core@^0.11.6":
   version "0.11.6"
-  resolved "https://registry.yarnpkg.com/@getcandy/hub-core/-/hub-core-0.11.6.tgz#e1ceaf9af8b32f4a188074092b7e619dac47e232"
+  resolved "https://registry.yarnpkg.com/@poesial/hub-core/-/hub-core-0.11.6.tgz#e1ceaf9af8b32f4a188074092b7e619dac47e232"
   integrity sha512-H2XlfzCDOlxLxEAmDnS3nS6NFzHNf1YbsuVJvwyc4Qj78wf5ukTQP5ij3dB7MBb6tYjcczW/dF952Mng+qE2dw==
   dependencies:
-    "@getcandy/hub-ui" "^0.11.6"
-    "@getcandy/node-client" "^0.10.2"
+    "@poesial/hub-ui" "^0.11.6"
+    "@poesial/node-client" "^0.10.2"
     fuse.js "^3.4.3"
     json2yaml "^1.1.0"
     node-sass "^4.13.0"
@@ -1146,9 +1146,9 @@
     vue-template-loader "^1.0.0"
     webpack "^4.41.2"
 
-"@getcandy/hub-ui@^0.11.6":
+"@poesial/hub-ui@^0.11.6":
   version "0.11.6"
-  resolved "https://registry.yarnpkg.com/@getcandy/hub-ui/-/hub-ui-0.11.6.tgz#7f6ccf6b6b15c4305384a0ab2aa7e76d4486a370"
+  resolved "https://registry.yarnpkg.com/@poesial/hub-ui/-/hub-ui-0.11.6.tgz#7f6ccf6b6b15c4305384a0ab2aa7e76d4486a370"
   integrity sha512-Y/u55LFOIwwVm32OPsYMH5+y/7y7hl5l9PVqNewvu0dwGsf4PCVv+40M/6iNHTMkNMtHt7OMSa4enKboftkHlQ==
   dependencies:
     "@babel/core" "^7.11.0"
@@ -1169,9 +1169,9 @@
     vue-loader "^15.9.3"
     vue-template-compiler "^2.6.11"
 
-"@getcandy/node-client@^0.10.2":
+"@poesial/node-client@^0.10.2":
   version "0.10.2"
-  resolved "https://registry.yarnpkg.com/@getcandy/node-client/-/node-client-0.10.2.tgz#e78479b6c720c0de29a697153e2c10b2bd933ced"
+  resolved "https://registry.yarnpkg.com/@poesial/node-client/-/node-client-0.10.2.tgz#e78479b6c720c0de29a697153e2c10b2bd933ced"
   integrity sha512-oU1ltj/K6XHxk3PsI30F79sAUDmEhMdwjf5hBA1/OCgNMyGQCEol8jNd+y3wyrPgAfzoK/0bhJjESdQQYBFvQA==
 
 "@istanbuljs/load-nyc-config@^1.0.0":

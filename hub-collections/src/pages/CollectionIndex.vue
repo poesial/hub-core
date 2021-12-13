@@ -34,7 +34,7 @@
 </template>
 
 <script>
-  import HasAttributes from '@getcandy/hub-core/src/mixins/HasAttributes'
+  import HasAttributes from '@poesial/hub-core/src/mixins/HasAttributes'
 
   export default {
     mixins: [

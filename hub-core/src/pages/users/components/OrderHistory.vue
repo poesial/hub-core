@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import InteractsWithOrders from '@getcandy/hub-orders/src/mixins/InteractsWithOrders.js'
+import InteractsWithOrders from '@poesial/hub-orders/src/mixins/InteractsWithOrders.js'
 
 export default {
   mixins: [

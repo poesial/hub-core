@@ -93,7 +93,7 @@
   const find = require('lodash/find')
 
   import ShippingMethodPriceForm from '../../../components/ShippingMethodPriceForm.vue'
-  import NormalizesObjects from '@getcandy/hub-core/src/mixins/NormalizesObjects.js'
+  import NormalizesObjects from '@poesial/hub-core/src/mixins/NormalizesObjects.js'
 
   export default {
     layout: 'shipping-method',

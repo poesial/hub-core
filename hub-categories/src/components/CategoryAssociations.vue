@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import HasAttributes from '@getcandy/hub-core/src/mixins/HasAttributes'
+import HasAttributes from '@poesial/hub-core/src/mixins/HasAttributes'
 import CategoryListItem from './CategoryListItem.vue'
 const each = require('lodash/each')
 

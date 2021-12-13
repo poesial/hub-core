@@ -80,8 +80,8 @@
 </template>
 
 <script>
-import HasLocalisedValues from '@getcandy/hub-core/src/mixins/HasLocalisedValues'
-import HandlesForms from '@getcandy/hub-core/src/mixins/HandlesForms'
+import HasLocalisedValues from '@poesial/hub-core/src/mixins/HasLocalisedValues'
+import HandlesForms from '@poesial/hub-core/src/mixins/HandlesForms'
 
 export default {
   mixins: [

@@ -1,5 +1,5 @@
 import LocalScheme from '@nuxtjs/auth/lib/schemes/local'
-import HubUser from '@getcandy/hub-core/src/modules/HubUser.js'
+import HubUser from '@poesial/hub-core/src/modules/HubUser.js'
 
 export default class SanctumScheme extends LocalScheme {
   // Override `fetchUser` method of `local` scheme

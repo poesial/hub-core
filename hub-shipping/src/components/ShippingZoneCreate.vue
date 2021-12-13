@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import HandlesForms from '@getcandy/hub-core/src/mixins/HandlesForms.js'
+import HandlesForms from '@poesial/hub-core/src/mixins/HandlesForms.js'
 
 export default {
   mixins: [

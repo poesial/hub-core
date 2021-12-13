@@ -60,7 +60,7 @@
 </template>
 
 <script>
-import HasAttributes from '@getcandy/hub-core/src/mixins/HasAttributes.js'
+import HasAttributes from '@poesial/hub-core/src/mixins/HasAttributes.js'
 import HasGroups from '../mixins/HasGroups.js'
 import EditStock from './EditStock.vue'
 const get = require('lodash/get')

@@ -70,8 +70,8 @@
 </template>
 
 <script>
-import HasLocalisedValues from '@getcandy/hub-core/src/mixins/HasLocalisedValues.js'
-import HasAttributes from '@getcandy/hub-core/src/mixins/HasAttributes'
+import HasLocalisedValues from '@poesial/hub-core/src/mixins/HasLocalisedValues.js'
+import HasAttributes from '@poesial/hub-core/src/mixins/HasAttributes'
 
 export default {
   mixins: [

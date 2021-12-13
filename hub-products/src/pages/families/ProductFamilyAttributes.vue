@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import NormalizesObjects from '@getcandy/hub-core/src/mixins/NormalizesObjects.js'
+import NormalizesObjects from '@poesial/hub-core/src/mixins/NormalizesObjects.js'
 import ProductFamilyAttributeManager from '../../components/ProductFamilyAttributeManager.vue'
 
 const filter = require('lodash/filter')

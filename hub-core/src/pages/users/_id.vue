@@ -111,7 +111,7 @@
 </template>
 
 <script>
-import HandlesForms from '@getcandy/hub-core/src/mixins/HandlesForms.js'
+import HandlesForms from '@poesial/hub-core/src/mixins/HandlesForms.js'
 import OrderHistory from './components/OrderHistory.vue'
 import UserDashboard from './components/UserDashboard.vue'
 

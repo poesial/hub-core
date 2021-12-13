@@ -18,22 +18,28 @@ export const state = () => ({
       position: 0,
       items: []
     },
+    'blog-content': {
+      label: 'Blog Content',
+      icon: 'building-store',
+      position: 10,
+      items: []
+    },
     'order-processing': {
       label: 'Order Processing',
       icon: 'credit-card',
-      position: 10,
+      position: 20,
       items: []
     },
     'marketing-suite': {
       label: 'Marketing Suite',
       icon: 'speakerphone',
-      position: 20,
+      position: 30,
       items: []
     },
     reports: {
       label: 'Reports',
       icon: 'chart-bar',
-      position: 30,
+      position: 40,
       items: []
     }
   },

@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import HandlesForms from '@getcandy/hub-core/src/mixins/HandlesForms.js'
-import HasDrafts from '@getcandy/hub-core/src/mixins/HasDrafts'
+import HandlesForms from '@poesial/hub-core/src/mixins/HandlesForms.js'
+import HasDrafts from '@poesial/hub-core/src/mixins/HasDrafts'
 const each = require('lodash/each')
 const find = require('lodash/find')
 const get = require('lodash/get')

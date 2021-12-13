@@ -102,8 +102,8 @@
 </template>
 
 <script>
-  import NormalizesObjects from '@getcandy/hub-core/src/mixins/NormalizesObjects.js'
-  import HasAttributes from '@getcandy/hub-core/src/mixins/HasAttributes.js'
+  import NormalizesObjects from '@poesial/hub-core/src/mixins/NormalizesObjects.js'
+  import HasAttributes from '@poesial/hub-core/src/mixins/HasAttributes.js'
   const get = require('lodash/get')
   const map = require('lodash/map')
 

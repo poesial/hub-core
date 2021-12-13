@@ -19,8 +19,8 @@
 </template>
 
 <script>
-import HasAttributes from '@getcandy/hub-core/src/mixins/HasAttributes.js'
-import HandlesForms from '@getcandy/hub-core/src/mixins/HandlesForms.js'
+import HasAttributes from '@poesial/hub-core/src/mixins/HasAttributes.js'
+import HandlesForms from '@poesial/hub-core/src/mixins/HandlesForms.js'
 
 export default {
   mixins: [

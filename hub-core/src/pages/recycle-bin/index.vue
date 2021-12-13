@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import HasAttributes from '@getcandy/hub-core/src/mixins/HasAttributes'
+import HasAttributes from '@poesial/hub-core/src/mixins/HasAttributes'
 const debounce = require('lodash/debounce')
 
 export default {

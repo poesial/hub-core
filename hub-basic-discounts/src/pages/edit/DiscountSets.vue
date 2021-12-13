@@ -166,8 +166,8 @@
   const get = require('lodash/get')
   const map = require('lodash/map')
   const each = require('lodash/each')
-  import NormalizesObjects from '@getcandy/hub-core/src/mixins/NormalizesObjects.js'
-  import HasAttributes from '@getcandy/hub-core/src/mixins/HasAttributes'
+  import NormalizesObjects from '@poesial/hub-core/src/mixins/NormalizesObjects.js'
+  import HasAttributes from '@poesial/hub-core/src/mixins/HasAttributes'
 
   export default {
     layout: 'discount',

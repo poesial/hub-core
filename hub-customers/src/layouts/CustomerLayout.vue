@@ -24,7 +24,7 @@ const map = require('lodash/map')
 const each = require('lodash/each')
 const get = require('lodash/get')
 import Gravatar from 'vue-gravatar'
-import DefaultLayout from '@getcandy/hub-core/src/layouts/Default.vue'
+import DefaultLayout from '@poesial/hub-core/src/layouts/Default.vue'
 
 export default {
   components: {

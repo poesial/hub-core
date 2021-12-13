@@ -256,8 +256,8 @@
 </template>
 
 <script>
-import HasLocalisedValues from '@getcandy/hub-core/src/mixins/HasLocalisedValues'
-import HasDrafts from '@getcandy/hub-core/src/mixins/HasDrafts.js'
+import HasLocalisedValues from '@poesial/hub-core/src/mixins/HasLocalisedValues'
+import HasDrafts from '@poesial/hub-core/src/mixins/HasDrafts.js'
 import VariantTiers from './VariantTiers.vue'
 import CreateVariant from './CreateVariant.vue'
 import VariantCustomerGroupPricing from './VariantCustomerGroupPricing.vue'

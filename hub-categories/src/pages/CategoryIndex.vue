@@ -88,7 +88,7 @@
 </template>
 
 <script>
-import { HasGroups, HasAttributes } from '@getcandy/hub-core/src/mixins/Index.js'
+import { HasGroups, HasAttributes } from '@poesial/hub-core/src/mixins/Index.js'
 import CategoryTree from '../components/CategoryTree.vue'
 import CategoryCreate from '../components/CategoryCreate.vue'
 

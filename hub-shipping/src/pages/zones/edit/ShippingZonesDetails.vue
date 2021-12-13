@@ -11,7 +11,7 @@
   const orderBy = require('lodash/orderBy')
   const each = require('lodash/each')
 
-  import NormalizesObjects from '@getcandy/hub-core/src/mixins/NormalizesObjects.js'
+  import NormalizesObjects from '@poesial/hub-core/src/mixins/NormalizesObjects.js'
 
   export default {
     layout: 'shipping-zone',

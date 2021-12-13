@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { NormalizesObjects, HasDrafts } from '@getcandy/hub-core/src/mixins/Index.js'
+import { NormalizesObjects, HasDrafts } from '@poesial/hub-core/src/mixins/Index.js'
 
 export default {
   layout: 'product',

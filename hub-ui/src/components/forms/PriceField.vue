@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import HasCurrencies from '@getcandy/hub-core/src/mixins/HasCurrencies.js'
+import HasCurrencies from '@poesial/hub-core/src/mixins/HasCurrencies.js'
 export default {
   mixins: [
     HasCurrencies

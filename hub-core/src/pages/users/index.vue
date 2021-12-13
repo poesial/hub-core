@@ -94,8 +94,8 @@
 </template>
 
 <script>
-import HasAttributes from '@getcandy/hub-core/src/mixins/HasAttributes'
-import HandlesForms from '@getcandy/hub-core/src/mixins/HandlesForms.js'
+import HasAttributes from '@poesial/hub-core/src/mixins/HasAttributes'
+import HandlesForms from '@poesial/hub-core/src/mixins/HandlesForms.js'
 const debounce = require('lodash/debounce')
 
 export default {

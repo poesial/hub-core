@@ -56,9 +56,9 @@
 </template>
 
 <script>
-import DefaultLayout from '@getcandy/hub-core/src/layouts/Default.vue'
-import HasAttributes from '@getcandy/hub-core/src/mixins/HasAttributes'
-import HasDrafts from '@getcandy/hub-core/src/mixins/HasDrafts'
+import DefaultLayout from '@poesial/hub-core/src/layouts/Default.vue'
+import HasAttributes from '@poesial/hub-core/src/mixins/HasAttributes'
+import HasDrafts from '@poesial/hub-core/src/mixins/HasDrafts'
 import ProductSettings from './products/components/ProductSettings.vue'
 const first = require('lodash/first')
 const get = require('lodash/get')

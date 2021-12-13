@@ -60,8 +60,8 @@
 <script>
 const map = require('lodash/map')
 const get = require('lodash/get')
-import DefaultLayout from '@getcandy/hub-core/src/layouts/Default.vue'
-import HasAttributes from '@getcandy/hub-core/src/mixins/HasAttributes'
+import DefaultLayout from '@poesial/hub-core/src/layouts/Default.vue'
+import HasAttributes from '@poesial/hub-core/src/mixins/HasAttributes'
 
 export default {
   components: {

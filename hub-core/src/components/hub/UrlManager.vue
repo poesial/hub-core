@@ -67,8 +67,8 @@
 </template>
 
 <script>
-import HubPage from '@getcandy/hub-core/src/mixins/HubPage'
-import HandlesForms from '@getcandy/hub-core/src/mixins/HandlesForms.js'
+import HubPage from '@poesial/hub-core/src/mixins/HubPage'
+import HandlesForms from '@poesial/hub-core/src/mixins/HandlesForms.js'
 
 const each = require('lodash/each')
 const find = require('lodash/find')

@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import { HasAttributes } from '@getcandy/hub-core/src/mixins/Index.js'
+import { HasAttributes } from '@poesial/hub-core/src/mixins/Index.js'
 import QuickViewPanel from './QuickViewPanel.vue'
 const truncate = require('lodash/truncate')
 

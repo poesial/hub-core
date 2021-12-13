@@ -37,8 +37,8 @@
 </template>
 
 <script>
-import NormalizesObjects from '@getcandy/hub-core/src/mixins/NormalizesObjects.js';
-import DefaultLayout from '@getcandy/hub-core/src/layouts/Default.vue'
+import NormalizesObjects from '@poesial/hub-core/src/mixins/NormalizesObjects.js';
+import DefaultLayout from '@poesial/hub-core/src/layouts/Default.vue'
 
 export default {
   mixins: [

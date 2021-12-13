@@ -14,9 +14,9 @@
 </template>
 
 <script>
-import HubPage from '@getcandy/hub-core/src/mixins/HubPage'
-import HasDrafts from '@getcandy/hub-core/src/mixins/HasDrafts'
-import HandlesForms from '@getcandy/hub-core/src/mixins/HandlesForms.js'
+import HubPage from '@poesial/hub-core/src/mixins/HubPage'
+import HasDrafts from '@poesial/hub-core/src/mixins/HasDrafts'
+import HandlesForms from '@poesial/hub-core/src/mixins/HandlesForms.js'
 
 const each = require('lodash/each')
 const first = require('lodash/first')

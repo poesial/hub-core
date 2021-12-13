@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { NormalizesObjects, HasDrafts, HubPage } from '@getcandy/hub-core/src/mixins/Index.js'
+import { NormalizesObjects, HasDrafts, HubPage } from '@poesial/hub-core/src/mixins/Index.js'
 
 const find = require('lodash/find')
 const orderBy = require('lodash/orderBy')

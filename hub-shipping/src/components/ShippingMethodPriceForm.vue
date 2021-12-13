@@ -123,8 +123,8 @@
 </template>
 
 <script>
-  import NormalizesObjects from '@getcandy/hub-core/src/mixins/NormalizesObjects.js'
-  import HasCurrencies from '@getcandy/hub-core/src/mixins/HasCurrencies.js'
+  import NormalizesObjects from '@poesial/hub-core/src/mixins/NormalizesObjects.js'
+  import HasCurrencies from '@poesial/hub-core/src/mixins/HasCurrencies.js'
 
   export default {
     mixins: [

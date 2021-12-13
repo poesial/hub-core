@@ -18,9 +18,9 @@
   const each = require('lodash/each')
   const find = require('lodash/find')
 
-  import HubPage from '@getcandy/hub-core/src/mixins/HubPage.js'
-  import NormalizesObjects from '@getcandy/hub-core/src/mixins/NormalizesObjects.js'
-  import HasDrafts from '@getcandy/hub-core/src/mixins/HasDrafts.js'
+  import HubPage from '@poesial/hub-core/src/mixins/HubPage.js'
+  import NormalizesObjects from '@poesial/hub-core/src/mixins/NormalizesObjects.js'
+  import HasDrafts from '@poesial/hub-core/src/mixins/HasDrafts.js'
 
   export default {
     layout: 'collection',

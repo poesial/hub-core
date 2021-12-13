@@ -22,8 +22,8 @@
   </div>
 </template>
 <script>
-import HasLocalisedValues from '@getcandy/hub-core/src/mixins/HasLocalisedValues.js'
-import HandlesForms from '@getcandy/hub-core/src/mixins/HandlesForms.js'
+import HasLocalisedValues from '@poesial/hub-core/src/mixins/HasLocalisedValues.js'
+import HandlesForms from '@poesial/hub-core/src/mixins/HandlesForms.js'
 const each = require('lodash/each')
 
 export default {

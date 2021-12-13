@@ -115,7 +115,7 @@
 </template>
 
 <script>
-import { NormalizesObjects, HasAttributes } from '@getcandy/hub-core/src/mixins/Index.js'
+import { NormalizesObjects, HasAttributes } from '@poesial/hub-core/src/mixins/Index.js'
 const each = require('lodash/each')
 const map = require('lodash/map')
 const get = require('lodash/get')

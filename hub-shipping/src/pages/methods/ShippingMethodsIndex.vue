@@ -32,7 +32,7 @@
 
 <script>
   const each = require('lodash/each')
-  import HasAttributes from '@getcandy/hub-core/src/mixins/HasAttributes'
+  import HasAttributes from '@poesial/hub-core/src/mixins/HasAttributes'
   import ShippingMethodCreate from '../../components/ShippingMethodCreate'
 
   export default {

@@ -1,0 +1,19 @@
+{
+  "name": "@poesial/hub-blogs",
+  "version": "0.12.30",
+  "description": "",
+  "main": "src/module.js",
+  "scripts": {
+    "test": "jest",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "yarn lint:js",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@poesial/hub-core": "^0.12.22"
+  },
+  "gitHead": "173ab68d3e3fc5ac87a2feb550759eeb4d805c0f"
+}
