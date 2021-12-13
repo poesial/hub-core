@@ -1,6 +1,6 @@
 {
   "name": "@poesial/nuxt-client",
-  "version": "0.12.35",
+  "version": "0.12.38",
   "description": "",
   "main": "src/module.js",
   "scripts": {
