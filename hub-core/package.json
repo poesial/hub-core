@@ -1,6 +1,6 @@
 {
   "name": "@poesial/hub-core",
-  "version": "0.12.33",
+  "version": "0.12.34",
   "description": "",
   "main": "src/module.js",
   "scripts": {
@@ -33,8 +33,8 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
-    "@poesial/hub-ui": "^0.12.33",
-    "@poesial/node-client": "^0.12.33",
+    "@poesial/hub-ui": "^0.12.34",
+    "@poesial/node-client": "^0.12.34",
     "dropzone": "^5.3.0",
     "fuse.js": "^3.4.3",
     "moment": "^2.24.0",
