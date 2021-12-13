@@ -1,6 +1,6 @@
 {
   "name": "@poesial/hub-basic-discounts",
-  "version": "0.12.35",
+  "version": "0.12.36",
   "description": "",
   "main": "src/module.js",
   "scripts": {
@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@poesial/hub-core": "^0.12.35"
+    "@poesial/hub-core": "^0.12.36"
   },
   "gitHead": "44affbe58a8b08c34f3a9d41459d8db89df5f387"
 }
