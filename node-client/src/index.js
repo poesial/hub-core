@@ -98,6 +98,7 @@ export default class GetCandy {
     this.taxes = new Taxes(this)
     this.users = new Users(this)
     this.versions = new Versions(this)
+    // this.blogs = new Blogs(this)
   }
 }
 // const utils = require('./utils');
