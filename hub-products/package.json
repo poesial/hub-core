@@ -1,6 +1,6 @@
 {
   "name": "@poesial/hub-products",
-  "version": "0.12.30",
+  "version": "0.12.31",
   "description": "",
   "main": "src/module.js",
   "scripts": {
@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@poesial/hub-core": "^0.12.22"
+    "@poesial/hub-core": "^0.12.31"
   },
   "gitHead": "173ab68d3e3fc5ac87a2feb550759eeb4d805c0f"
 }
