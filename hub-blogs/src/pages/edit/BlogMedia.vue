@@ -30,7 +30,8 @@ export default {
       pendingDraftCreation: false,
       processOnAdd: false,
       pending: [],
-      assetsToMerge: []
+      assetsToMerge: [],
+      storeHandle: 'blog',
     }
   },
   computed: {

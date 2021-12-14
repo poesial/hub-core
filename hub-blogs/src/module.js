@@ -15,7 +15,6 @@ export default function (moduleOptions) {
     'pages/BlogIndex.vue',
     'pages/edit/BlogDetails.vue',
     'pages/edit/BlogMedia.vue',
-    'pages/edit/BlogAvailability.vue',
     'pages/edit/BlogAssociations.vue',
     'pages/edit/BlogUrls.vue',
     'pages/families/BlogFamilyIndex.vue',
@@ -25,11 +24,6 @@ export default function (moduleOptions) {
     // 'pages/reports/BlogStockReport.vue',
 
     // New components
-    'components/variants/VariantManager.vue',
-    'components/variants/VariantTiers.vue',
-    'components/variants/VariantOptions.vue',
-    'components/variants/CreateVariant.vue',
-    'components/variants/VariantCustomerGroupPricing.vue',
     'components/BlogAssociation.vue',
     'components/BlogTable.vue',
     'components/BlogCreate.vue',

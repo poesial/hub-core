@@ -13,19 +13,19 @@ export default {
         }
       }
 
-      if (this.visibility(collection, 'channels') === 'None' || this.visibility(collection, 'customer_groups') === 'None') {
-        return {
-          status: 'unpublished',
-          label: 'Unpublished'
-        }
-      }
-
-      if (this.visibility(collection, 'channels') !== 'All' || this.visibility(collection, 'customer_groups') !== 'All') {
-        return {
-          status: 'limited',
-          label: 'Limited Visibility'
-        }
-      }
+      // if (this.visibility(collection, 'channels') === 'None' || this.visibility(collection, 'customer_groups') === 'None') {
+      //   return {
+      //     status: 'unpublished',
+      //     label: 'Unpublished'
+      //   }
+      // }
+      //
+      // if (this.visibility(collection, 'channels') !== 'All' || this.visibility(collection, 'customer_groups') !== 'All') {
+      //   return {
+      //     status: 'limited',
+      //     label: 'Limited Visibility'
+      //   }
+      // }
 
       return {
         status: 'live',
@@ -33,6 +33,7 @@ export default {
       }
     },
     visibility (collection, ref) {
+      console.log(collection, ref)
       let groups
       const visible = []
 

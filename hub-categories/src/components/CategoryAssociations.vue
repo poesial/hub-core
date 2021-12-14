@@ -67,12 +67,18 @@ export default {
       default () {
         return {}
       }
+    },
+    blog: {
+      type: Object,
+      default () {
+        return {}
+      }
     }
   },
   data () {
     return {
       showBrowser: false,
-      categories: this.product ? this.product.categories.data : [],
+      categories: Object.keys(this.product).length ? this.product.categories.data : (this.blog ? this.blog.categories.data : []),
       selected: [],
       tree: {}
     }
@@ -112,7 +118,14 @@ export default {
       })
     },
     async save () {
-      await this.$gc.products.associateCategories(this.product.id, this.selected)
+      if (Object.keys(this.product).length) {
+        await this.$gc.products.associateCategories(this.product.id, this.selected)
+      }
+
+      if (this.blog) {
+        await this.$gc.blogs.associateCategories(this.blog.id, this.selected)
+      }
+
       this.$notify.queue('success', this.$t('Associations updated'))
     }
   }

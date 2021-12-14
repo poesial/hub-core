@@ -3,7 +3,8 @@
 import Vue from 'vue'
 
 import Sortable from 'sortablejs'
-import ProductAssociations from './products/pages/edit/ProductAssociations.vue'
+import ProductAssociationsPage from './products/pages/edit/ProductAssociations.vue'
+import ProductAssociations from './products/components/ProductAssociation'
 import ProductAvailability from './products/pages/edit/ProductAvailability.vue'
 import ProductDetails from './products/pages/edit/ProductDetails.vue'
 import ProductFamilyAttributes from './products/pages/families/ProductFamilyAttributes.vue'
@@ -67,7 +68,7 @@ export default ({ app }, inject) => {
     {
       path: '/catalogue-manager/products/:id/associations',
       name: 'products.edit.associations',
-      component: ProductAssociations,
+      component: ProductAssociationsPage,
       meta: {
         permissions: ['manage-catalogue']
       }
@@ -129,6 +130,13 @@ export default ({ app }, inject) => {
   app.store.registerModule('productFamily', ProductFamilyStore)
 
   app.store.commit('product/setConfig', options)
+
+  app.$hooks.hook('blogs.associations.tabs', (items) => {
+    items.push({
+      title: 'Products',
+      component: ProductAssociations
+    })
+  })
 
   app.store.dispatch('addNavItems', {
     section: 'catalogue-manager',

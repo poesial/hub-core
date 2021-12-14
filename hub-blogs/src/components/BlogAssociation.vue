@@ -9,14 +9,13 @@
       <quick-view-panel heading="Search blogs" :open="showBrowser" width="w-2/3" @close="showBrowser = false">
         <search-table
           :limit="10"
-          includes="assets.transforms,variants"
+          includes="assets.transforms"
           :update-query-string="false"
           :search-placeholder="$t('Search blogs')"
           type="blogs"
           :columns="[
             {label: '', field: 'thumbnail'},
-            {label: $t('Name'), field: 'name'},
-            {label: $t('SKU'), field: 'sku'},
+            {label: $t('Title'), field: 'title'},
             {label: null, field: 'actions'},
           ]"
         >
@@ -32,7 +31,7 @@
               <thumbnail-loader width="30px" :asset="row.assets.data[0]" />
             </nuxt-link>
           </template>
-          <template v-slot:name="{ row }">
+          <template v-slot:title="{ row }">
             <nuxt-link
               :to="{
                 name: 'blogs.view',
@@ -41,11 +40,8 @@
                 }
               }"
             >
-              {{ attribute(row.attribute_data, 'name') }}
+              {{ attribute(row.attribute_data, 'title') }}
             </nuxt-link>
-          </template>
-          <template v-slot:sku="{ row }">
-            {{ getSkus(row).join(', ') }}
           </template>
           <template v-slot:actions="{ row }">
             <template v-if="row.id != blog.id">
@@ -78,8 +74,8 @@
           <thead>
             <tr>
               <th />
-              <th>{{ $t('Name') }}</th>
-              <th>{{ $t('SKU') }}</th>
+              <th>{{ $t('Title') }}</th>
+              <th>{{ $t('Author') }}</th>
               <th>{{ $t('Type') }}</th>
               <th />
             </tr>
@@ -87,8 +83,8 @@
           <tbody>
             <tr v-for="(association, rowIndex) in associations" :key="rowIndex">
               <td><thumbnail-loader width="50px" :asset="association.thumbnail" /></td>
-              <td>{{ attribute(association.attribute_data, 'name') }}</td>
-              <td>{{ association.skus.join(', ') }}</td>
+              <td>{{ attribute(association.attribute_data, 'title') }}</td>
+              <td>{{ attribute(association.attribute_data, 'author') }}</td>
               <td>
                 <gc-select v-model="association.type" placeholder="Select a type" @change="updateAssociationType">
                   <option
@@ -153,7 +149,6 @@ export default {
     this.associations = map(get(this.blog, 'associations.data', []), (item) => {
       return {
         id: item.association.data.id,
-        skus: this.getSkus(item.association.data),
         thumbnail: item.association.data.assets.data[0],
         attribute_data: item.association.data.attribute_data,
         type: item.group.data.id
@@ -180,12 +175,6 @@ export default {
 
       this.$emit('changed', () => {
         this.save()
-      })
-    },
-    getSkus(blog) {
-      const variants = get(blog, 'variants.data', [])
-      return map(variants, v => {
-        return v.sku
       })
     },
     updateAssociationType () {

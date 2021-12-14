@@ -109,6 +109,13 @@ export default ({ app }, inject) => {
     })
   })
 
+  app.$hooks.hook('blogs.associations.tabs', (items) => {
+    items.push({
+      title: 'Categories',
+      component: CategoryAssociations
+    })
+  })
+
   // app.$hooks.hook('tree-test', async (items) => {
   //   items.push('four');
   // })

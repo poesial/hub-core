@@ -11,9 +11,6 @@
         {{ $t("You are viewing a draft, changes below won't be reflected until published") }}
       </div>
       <toolbar heading="Blogs" :sub-heading="title">
-        <template v-slot:subHeadingExtra>
-          <span class="block text-xs text-red-600">{{ sku }}</span>
-        </template>
         <div class="flex items-center">
           <div>
             <draft-tools
@@ -84,10 +81,6 @@ export default {
         label: 'Media'
       },
       {
-        route: 'blogs.edit.availability',
-        label: 'Availability &amp; Pricing'
-      },
-      {
         route: 'blogs.edit.associations',
         label: 'Associations'
       },
@@ -139,13 +132,6 @@ export default {
     },
     blog () {
       return this.$store.state.blog.model
-    },
-    sku () {
-      const variants = get(this.blog, 'variants.data', [])
-      if (!variants.length || variants.length > 1) {
-        return null
-      }
-      return variants.map(v => v.sku).join(', ')
     },
     liveId () {
       return this.$store.state.blog.liveId

@@ -30,7 +30,8 @@ export default {
       translateLanguage: null,
       attributeGroups: [],
       blog: null,
-      translating: false
+      translating: false,
+      storeHandle: 'blog',
     }
   },
   computed: {

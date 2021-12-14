@@ -32,6 +32,8 @@ import ShippingMethods from './resources/ShippingMethods'
 import ShippingZones from './resources/ShippingZones'
 import Users from './resources/Users'
 import Versions from './resources/Versions'
+import Blogs from './resources/Blogs'
+import BlogFamilies from './resources/BlogFamilies'
 
 export {
   ActivityLog,
@@ -65,7 +67,9 @@ export {
   ShippingZones,
   Taxes,
   Users,
-  Versions
+  Versions,
+  Blogs,
+  BlogFamilies
 }
 
 // module.exports = {

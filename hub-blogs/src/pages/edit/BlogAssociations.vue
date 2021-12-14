@@ -36,7 +36,8 @@ export default {
       tabs: [{
         title: 'Blogs',
         component: BlogAssociation
-      }]
+      }],
+      storeHandle: 'blog',
     }
   },
   computed: {

@@ -32,7 +32,9 @@ import {
     Discounts,
     RecycleBin,
     Routes,
-    Versions
+    Versions,
+    Blogs,
+    BlogFamilies
 } from './resources'
 
 import CandyResource from './CandyResource.js'
@@ -98,9 +100,8 @@ export default class GetCandy {
     this.taxes = new Taxes(this)
     this.users = new Users(this)
     this.versions = new Versions(this)
-    // this.blogs = new Blogs(this)
-    // this.blogFamilies = new BlogFamilies(this)
-    // this.blogVariants = new BlogFamilies(this)
+    this.blogs = new Blogs(this)
+    this.blogFamilies = new BlogFamilies(this)
   }
 }
 // const utils = require('./utils');

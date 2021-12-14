@@ -2,12 +2,13 @@
 <template>
   <div>
     <form v-if="blog" @submit.prevent="save">
-      <form-field :label="$t('Blog name')" for="name" :error="getFirstFormError('name')" required>
-        <gc-input id="name" v-model="blog.name[locale]" />
+      <form-field :label="$t('Blog title')" for="title" :error="getFirstFormError('title')" required>
+        <gc-input id="title" v-model="blog.title[locale]" />
       </form-field>
-      <form-field :label="$t('SKU')" :error="getFirstFormError('sku')" for="sku" required>
-        <gc-sku-input id="sku" v-model="blog.sku" />
+      <form-field :label="$t('Blog sub title')" for="sub_title" :error="getFirstFormError('sub_title')" required>
+        <gc-input id="sub_title" v-model="blog.sub_title[locale]" />
       </form-field>
+
       <div class="mb-4">
         <header class="mb-2 text-sm">
           <label class="block font-bold text-gray-700">{{ $t('Blog Family') }}</label>
@@ -21,14 +22,8 @@
           />
         </div>
       </div>
-      <form-field :label="$t('Price')" :error="getFirstFormError('price')" for="price" required>
-        <gc-price-input id="price" v-model="blog.price" :is-cents="false" />
-      </form-field>
-      <form-field :label="$t('Stock')" for="stock">
-        <gc-input id="stock" v-model="blog.stock" type="number" steps="1" />
-      </form-field>
       <form-field :label="$t('Slug')" :error="getFirstFormError('url')" for="slug" required>
-        <gc-slug-input id="slug" v-model="blog.url" :initial="blog.name[locale]" />
+        <gc-slug-input id="slug" v-model="blog.url" :initial="blog.title[locale]" />
       </form-field>
 
       <gc-button :disabled="processing" :loading="processing" type="submit">
@@ -60,8 +55,8 @@ export default {
     }
   },
   computed: {
-    blogName () {
-      return this.blog.name[this.locale]
+    blogTitle () {
+      return this.blog.title[this.locale]
     },
     slug () {
       return this.$format.slug(this.blog.url)
@@ -84,7 +79,7 @@ export default {
           JSON.stringify(this.blog)
         )
 
-        if (!this.blogName) {
+        if (!this.blogTitle) {
           delete data.name
         }
         const response = await this.$gc.blogs.create(data)
@@ -113,14 +108,14 @@ export default {
     },
     baseBlog () {
       return {
-        name: {
+        title: {
+          [this.locale]: ''
+        },
+        sub_title: {
           [this.locale]: ''
         },
         family_id: null,
-        sku: '',
-        price: '',
-        url: '',
-        stock: 1
+        url: ''
       }
     }
   }

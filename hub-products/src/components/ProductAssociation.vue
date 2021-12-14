@@ -88,7 +88,7 @@
             <tr v-for="(association, rowIndex) in associations" :key="rowIndex">
               <td><thumbnail-loader width="50px" :asset="association.thumbnail" /></td>
               <td>{{ attribute(association.attribute_data, 'name') }}</td>
-              <td>{{ association.skus.join(', ') }}</td>
+              <td>{{ association.skus ? association.skus.join(', ') : '' }}</td>
               <td>
                 <gc-select v-model="association.type" placeholder="Select a type" @change="updateAssociationType">
                   <option

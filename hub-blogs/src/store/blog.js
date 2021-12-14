@@ -2,15 +2,10 @@ const defaultIncludes = Array([
   'assets.tags',
   'assets.transforms',
   'associations.association.assets.transforms',
-  'associations.association.variants',
   'associations.group',
   'attributes.group.attributes',
   'categories.assets.transforms',
   'categories.routes',
-  'channels',
-  'collections',
-  'collections.routes',
-  'customerGroups',
   'draft',
   'publishedParent',
   'family.attributes.group',
@@ -18,11 +13,6 @@ const defaultIncludes = Array([
   'routes.language',
   'routes.publishedParent',
   'routes.draft',
-  'variants.customerPricing.group',
-  'variants.customerPricing.tax',
-  'variants.image.transforms',
-  'variants.tax',
-  'variants.tiers.group',
   'versions.user',
   'versions.relations'
 ]).join(',')
@@ -167,7 +157,7 @@ export const actions = {
       return
     }
 
-    commit('setModel', blogs)
+    commit('setModel', blog)
 
     if (!isDraft) {
       commit('setLiveId', blog.id)
@@ -238,13 +228,4 @@ export const actions = {
       }
     })
   },
-
-  async createVariants ({ dispatch }, { variants, $nuxt, blogId }) {
-    await $nuxt.$getcandy.on('blog-variants', 'postBlogVariants', blogId, null, variants)
-
-    await dispatch('fetch', {
-      $nuxt,
-      id: blogId
-    })
-  }
 }

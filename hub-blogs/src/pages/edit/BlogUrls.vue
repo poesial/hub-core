@@ -33,7 +33,8 @@ export default {
   data () {
     return {
       routes: [],
-      redirects: []
+      redirects: [],
+      storeHandle: 'blog',
     }
   },
   computed: {

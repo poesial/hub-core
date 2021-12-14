@@ -5,7 +5,6 @@ import Vue from 'vue'
 import Sortable from 'sortablejs'
 import BlogAssociations from './blogs/pages/edit/BlogAssociations.vue'
 import BlogDetails from './blogs/pages/edit/BlogDetails.vue'
-import BlogAvailability from './blogs/pages/edit/BlogAvailability.vue'
 import BlogFamilyAttributes from './blogs/pages/families/BlogFamilyAttributes.vue'
 import BlogFamilyEdit from './blogs/pages/families/BlogFamilyEdit.vue'
 import BlogFamilyIndex from './blogs/pages/families/BlogFamilyIndex.vue'
@@ -51,14 +50,6 @@ export default ({ app }, inject) => {
       path: '/blog-content/blogs/:id/media',
       name: 'blogs.edit.media',
       component: BlogMedia,
-      meta: {
-        permissions: ['manage-catalogue']
-      }
-    },
-    {
-      path: '/blog-content/blogs/:id/availability-pricing',
-      name: 'blogs.edit.availability',
-      component: BlogAvailability,
       meta: {
         permissions: ['manage-catalogue']
       }

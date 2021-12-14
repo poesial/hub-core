@@ -1,12 +1,12 @@
 <template>
   <search-table
-    :search-placeholder="$t('Search blogs by attribute or SKU')"
+    :search-placeholder="$t('Search blogs by attribute')"
     :limit="limit"
     :external-term="searchTerm"
     type="blogs"
     :checkable="checkable"
     class="has-round-edge"
-    includes="channels,customer_groups,family,variants,assets.transforms,draft"
+    includes="family,assets.transforms,draft"
     :hide-search="hideSearch"
     :columns="tableColumns"
     @loaded="(e) => $emit('loaded', e)"
@@ -24,13 +24,15 @@
         }"
       >
         <span>{{ visibilityStatus(row).label }}</span>
-        <!-- <span v-else-if="visibility(row, 'channels') == 'None' || visibility(row, 'customer_groups') == 'None'">Unpublished</span>
-        <span v-else-if="visibility(row, 'channels') != 'All' || visibility(row, 'customer_groups') != 'All'">Limited</span>
-        <span v-else>Active</span> -->
       </span>
     </template>
-    <template v-slot:name="{ row }">
-
+    <template v-slot:date="{ row }">
+      {{ $format.date(row.created_at) }}
+    </template>
+    <template v-slot:author="{ row }">
+      {{ attribute(row.attribute_data, 'author') }}
+    </template>
+    <template v-slot:title="{ row }">
       <nuxt-link
         class="flex items-center block"
         :to="{
@@ -40,21 +42,8 @@
           }
         }"
       >
-        <thumbnail-loader width="30px" :asset="row.assets.data[0]" />
-        <span class="ml-4">{{ attribute(row.attribute_data, 'name') }}</span>
+        {{ attribute(row.attribute_data, 'title') }}
       </nuxt-link>
-    </template>
-    <template v-slot:stock="{ row }">
-      <edit-stock :blog="row" />
-    </template>
-    <template v-slot:price="{ row }">
-      {{ row.variants.data[0].price }}
-    </template>
-    <template v-slot:customer-groups="{ row }">
-      (Coming soon)
-    </template>
-    <template v-slot:purchasable="{ row }">
-      <span class="tag is-success-table">{{ purchasable(row, 'customer_groups') }}</span>
     </template>
   </search-table>
 </template>
@@ -62,14 +51,10 @@
 <script>
 import HasAttributes from '@poesial/hub-core/src/mixins/HasAttributes.js'
 import HasGroups from '../mixins/HasGroups.js'
-import EditStock from './EditStock.vue'
 const get = require('lodash/get')
 const find = require('lodash/find')
 
 export default {
-  components: {
-    EditStock
-  },
   mixins: [
     HasGroups,
     HasAttributes
@@ -106,10 +91,9 @@ export default {
     tableColumns() {
       const columns = [
         {label: 'Status', field: 'status'},
-        {label: this.$t('Name'), field: 'name', truncate: true},
-        {label: this.$t('Stock'), field: 'stock'},
-        {label: this.$t('Price'), field: 'price'},
-        {label: this.$t('Discounts available'), field: 'customer-groups'},
+        {label: this.$t('Date'), field: 'date'},
+        {label: this.$t('Title'), field: 'title', truncate: true},
+        {label: 'Author', field: 'author'},
       ];
 
       if (this.checkable) {
