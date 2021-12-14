@@ -3,7 +3,7 @@ import path from 'path'
 export default function (moduleOptions) {
   const templates = [
     'mixins/HasGroups.js',
-    'components/EditStock.vue',
+    // 'components/EditStock.vue',
     'components/BlogSettings.vue',
 
     // VueX Store
