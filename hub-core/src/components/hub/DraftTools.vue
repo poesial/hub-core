@@ -16,6 +16,11 @@
             {{ $t('Discard draft') }}
           </gc-button>
         </div>
+        <div class="mr-2">
+          <gc-button theme="green" @click="showDuplicateConfirm = true">
+            {{ $t('Duplicate') }}
+          </gc-button>
+        </div>
         <div>
           <gc-button @click="showPublishConfirm = true">
             {{ $t('Publish changes') }}
@@ -62,6 +67,18 @@
       @close="showPublishConfirm = false"
     >
       {{ $t('Are you sure you want to publish your changes?') }}
+    </simple-modal>
+
+    <simple-modal
+      heading="Duplicate product"
+      :open="showDuplicateConfirm"
+      @confirmed="() => {
+        showDuplicateConfirm = false
+        $emit('duplicate')
+      }"
+      @close="showDuplicateConfirm = false"
+    >
+      {{ $t('Are you sure you want to duplicate the product?') }}
     </simple-modal>
 
     <simple-modal
@@ -138,6 +155,14 @@ export default {
       type: String,
       default: null
     },
+    duplicateProduct: {
+      type: Boolean,
+      default: false
+    },
+    duplicate: {
+      type: String,
+      default: null
+    },
     isDraft: {
       type: Boolean,
       default: false
@@ -145,6 +170,7 @@ export default {
   },
   data () {
     return {
+      showDuplicateConfirm: false,
       showDiscardConfirm: false,
       showPublishConfirm: false,
       showDeleteConfirm: false,

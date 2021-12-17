@@ -7,6 +7,8 @@ const defaultIncludes = Array([
   'attributes.group.attributes',
   'categories.assets.transforms',
   'categories.routes',
+  'blogs.assets.transforms',
+  'blogs.routes',
   'channels',
   'collections',
   'collections.routes',
@@ -236,6 +238,23 @@ export const actions = {
       params: {
         id: liveId
       }
+    })
+  },
+
+  /**
+   * Duplicate a product
+   *
+   * @param   {Function}  dispatch
+   * @param   {String}  id
+   * @param   {Object}  $nuxt
+   * @param   {String}  liveId
+   *
+   * @return  void
+   */
+  async duplicate ({ dispatch }, { id, $nuxt, skus, routes }) {
+    return await $nuxt.$getcandy.on('products', 'postProductsProductIdDuplicate', id, {
+      skus,
+      routes
     })
   },
 

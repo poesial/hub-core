@@ -6,6 +6,8 @@ const defaultIncludes = Array([
   'attributes.group.attributes',
   'categories.assets.transforms',
   'categories.routes',
+  'products.assets.transforms',
+  'products.routes',
   'draft',
   'publishedParent',
   'family.attributes.group',

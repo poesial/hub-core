@@ -3,7 +3,8 @@
 import Vue from 'vue'
 
 import Sortable from 'sortablejs'
-import BlogAssociations from './blogs/pages/edit/BlogAssociations.vue'
+import BlogAssociationsPage from './blogs/pages/edit/BlogAssociations.vue'
+import BlogAssociations from './blogs/components/BlogAssociation'
 import BlogDetails from './blogs/pages/edit/BlogDetails.vue'
 import BlogFamilyAttributes from './blogs/pages/families/BlogFamilyAttributes.vue'
 import BlogFamilyEdit from './blogs/pages/families/BlogFamilyEdit.vue'
@@ -31,7 +32,7 @@ export default ({ app }, inject) => {
   })
   const routes = [
     {
-      path: '/blog-content/posts',
+      path: '/blog-content/blogs',
       name: 'blogs',
       component: BlogIndex,
       meta: {
@@ -57,7 +58,7 @@ export default ({ app }, inject) => {
     {
       path: '/blog-content/blogs/:id/associations',
       name: 'blogs.edit.associations',
-      component: BlogAssociations,
+      component: BlogAssociationsPage,
       meta: {
         permissions: ['manage-catalogue']
       }
@@ -119,6 +120,13 @@ export default ({ app }, inject) => {
   app.store.registerModule('blogFamily', BlogFamilyStore)
 
   app.store.commit('blog/setConfig', options)
+
+  app.$hooks.hook('products.associations.tabs', (items) => {
+    items.push({
+      title: 'Blogs',
+      component: BlogAssociations
+    })
+  })
 
   app.store.dispatch('addNavItems', {
     section: 'blog-content',

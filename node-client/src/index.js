@@ -34,7 +34,8 @@ import {
     Routes,
     Versions,
     Blogs,
-    BlogFamilies
+    BlogFamilies,
+    OtherContents
 } from './resources'
 
 import CandyResource from './CandyResource.js'
@@ -102,6 +103,7 @@ export default class GetCandy {
     this.versions = new Versions(this)
     this.blogs = new Blogs(this)
     this.blogFamilies = new BlogFamilies(this)
+    this.otherContents = new OtherContents(this)
   }
 }
 // const utils = require('./utils');

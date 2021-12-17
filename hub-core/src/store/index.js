@@ -30,16 +30,22 @@ export const state = () => ({
       position: 20,
       items: []
     },
+    'other-content': {
+      label: 'Other Content',
+      icon: 'building-store',
+      position: 30,
+      items: []
+    },
     'marketing-suite': {
       label: 'Marketing Suite',
       icon: 'speakerphone',
-      position: 30,
+      position: 40,
       items: []
     },
     reports: {
       label: 'Reports',
       icon: 'chart-bar',
-      position: 40,
+      position: 50,
       items: []
     }
   },

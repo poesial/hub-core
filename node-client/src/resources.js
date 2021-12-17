@@ -34,6 +34,7 @@ import Users from './resources/Users'
 import Versions from './resources/Versions'
 import Blogs from './resources/Blogs'
 import BlogFamilies from './resources/BlogFamilies'
+import OtherContents from './resources/OtherContents'
 
 export {
   ActivityLog,
@@ -69,7 +70,8 @@ export {
   Users,
   Versions,
   Blogs,
-  BlogFamilies
+  BlogFamilies,
+  OtherContents
 }
 
 // module.exports = {

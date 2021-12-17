@@ -129,12 +129,18 @@ export default {
       default () {
         return {}
       }
+    },
+    product: {
+      type: Object,
+      default () {
+        return {}
+      }
     }
   },
   data () {
     return {
       showBrowser: false,
-      associations: [],
+      associations: Object.keys(this.product).length ? this.product.blogs.data : [],
       selected: [],
       groups: []
     }
@@ -146,14 +152,16 @@ export default {
       })
     })
 
-    this.associations = map(get(this.blog, 'associations.data', []), (item) => {
-      return {
-        id: item.association.data.id,
-        thumbnail: item.association.data.assets.data[0],
-        attribute_data: item.association.data.attribute_data,
-        type: item.group.data.id
-      }
-    })
+    if (!Object.keys(this.product).length) {
+      this.associations = map(get(this.blog, 'associations.data', []), (item) => {
+        return {
+          id: item.association.data.id,
+          thumbnail: item.association.data.assets.data[0],
+          attribute_data: item.association.data.attribute_data,
+          type: item.group.data.id
+        }
+      })
+    }
 
     // We need to get the association groups, this is quite specific
     // to what we're trying to do here so we can just fetch them?
@@ -200,16 +208,26 @@ export default {
       })
     },
     async save () {
-      // Map it out so our API can understand it.
-      const relations = map(this.associations, (item) => {
-        return {
-          association_id: item.id,
-          type: item.type
-        }
-      })
+      if (this.product) {
+        // Map it out so our API can understand it.
+        const relations = map(this.associations, (item) => {
+          return item.id;
+        })
 
-      await this.$gc.blogs.updateBlogAssociations(this.blog.id, relations)
-      this.$notify.queue('success', this.$t('Associations updated'))
+        await this.$gc.products.associateBlogs(this.product.id, relations)
+        this.$notify.queue('success', this.$t('Associations updated'))
+      } else {
+        // Map it out so our API can understand it.
+        const relations = map(this.associations, (item) => {
+          return {
+            association_id: item.id,
+            type: item.type
+          }
+        })
+
+        await this.$gc.blogs.updateBlogAssociations(this.blog.id, relations)
+        this.$notify.queue('success', this.$t('Associations updated'))
+      }
     }
   }
 }

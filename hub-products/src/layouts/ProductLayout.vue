@@ -21,6 +21,7 @@
               :live-url="liveUrl"
               :is-draft="isDraft"
               :creating-draft="creatingDraft"
+              :duplicate-product="true"
               :publishing-draft="publishingDraft"
               :versions="product.versions ? product.versions.data : []"
               :created-at="product.created_at"
@@ -29,6 +30,7 @@
               @delete="triggerDelete"
               @publish="publish"
               @restore="restore"
+              @duplicate="duplicate"
             />
           </div>
           <div class="ml-3">
@@ -210,6 +212,19 @@ export default {
         }
       } catch (e) {
         this.$notify.queue('error', this.$t('Unable to discard draft'))
+      }
+    },
+    async duplicate () {
+      try {
+        await this.$store.dispatch('product/duplicate', {
+          id: this.product.id,
+          $nuxt: this.$nuxt,
+          skus: get(this.product, 'variants.data', []),
+          routes: this.product.routes.data
+        })
+
+      } catch (e) {
+        this.$notify.queue('error', this.$t('Unable to duplicate product'))
       }
     },
     async publish () {

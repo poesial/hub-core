@@ -42,6 +42,11 @@ export default class Blogs extends CandyResource {
             relations: associations
         }, params)
     }
+    associateProducts(id, products, params) {
+      return this.$post(`blogs/${id}/products`, {
+        products
+      }, params)
+    }
     associateCategories(id, categories, params) {
         return this.$post(`blogs/${id}/categories`, {
             categories

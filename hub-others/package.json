@@ -1,0 +1,17 @@
+{
+  "name": "@poesial/hub-other",
+  "version": "0.12.41",
+  "description": "",
+  "main": "src/module.js",
+  "scripts": {
+    "test": "jest",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@poesial/hub-core": "^0.12.41"
+  },
+  "gitHead": "a3956514e695231af3fd60cd2e22fa6333ecfa51"
+}
