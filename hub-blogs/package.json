@@ -1,6 +1,6 @@
 {
   "name": "@poesial/hub-blogs",
-  "version": "0.12.42",
+  "version": "0.12.43",
   "description": "",
   "main": "src/module.js",
   "scripts": {
@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@poesial/hub-core": "^0.12.41"
+    "@poesial/hub-core": "^0.12.43"
   },
   "gitHead": "a3956514e695231af3fd60cd2e22fa6333ecfa51"
 }
