@@ -1,6 +1,6 @@
 {
   "name": "@poesial/hub-orders",
-  "version": "0.12.43",
+  "version": "0.12.44",
   "description": "",
   "main": "src/module.js",
   "scripts": {
@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@poesial/hub-core": "^0.12.43",
+    "@poesial/hub-core": "^0.12.44",
     "chart.js": "^2.9.3",
     "moment": "^2.24.0"
   },
