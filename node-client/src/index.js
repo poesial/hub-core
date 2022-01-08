@@ -35,7 +35,9 @@ import {
     Versions,
     Blogs,
     BlogFamilies,
-    OtherContents
+    OtherContents,
+    BrandManagement,
+    GoodFor
 } from './resources'
 
 import CandyResource from './CandyResource.js'
@@ -104,6 +106,8 @@ export default class GetCandy {
     this.blogs = new Blogs(this)
     this.blogFamilies = new BlogFamilies(this)
     this.otherContents = new OtherContents(this)
+    this.brandManagement = new BrandManagement(this)
+    this.goodFor = new GoodFor(this)
   }
 }
 // const utils = require('./utils');

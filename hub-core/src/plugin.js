@@ -18,6 +18,8 @@ import Account from './getcandyhub/pages/Account.vue'
 import ApiSettingsHandle from './getcandyhub/pages/settings/api/_handle.vue'
 import AttributesIndex from './getcandyhub/pages/settings/attributes/index.vue'
 import AttributesShow from './getcandyhub/pages/settings/attributes/_id.vue'
+import GoodForIndex from './getcandyhub/pages/settings/good_for/index.vue'
+import BrandManagementShow from './getcandyhub/pages/settings/brand/management.vue'
 import AttributeGroupsIndex from './getcandyhub/pages/settings/attribute-groups/index.vue'
 import AttributeGroupsShow from './getcandyhub/pages/settings/attribute-groups/_id.vue'
 import Login from './getcandyhub/pages/Login.vue'
@@ -38,6 +40,7 @@ import ChannelManager from './getcandyhub/components/hub/ChannelManager.vue'
 import ClickToCopy from './getcandyhub/components/hub/ClickToCopy.vue'
 import CodeBlock from './getcandyhub/components/hub/CodeBlock.vue'
 import CreateAttribute from './getcandyhub/components/forms/CreateAttribute.vue'
+import CreateIcon from './getcandyhub/components/forms/CreateIcon.vue'
 import CustomerGroupManager from './getcandyhub/components/hub/CustomerGroupManager.vue'
 import DraftTools from './getcandyhub/components/hub/DraftTools.vue'
 import EntrySidebar from './getcandyhub/components/hub/EntrySidebar.vue'
@@ -78,6 +81,7 @@ import VersionRecord from './getcandyhub/components/hub/VersionRecord.vue'
 import YoutubeUploader from './getcandyhub/components/forms/YoutubeUploader.vue'
 import { state, mutations, actions } from './getcandyhub/store/index.js';
 import UserStore from './getcandyhub/store/user.js';
+import GoodForAssociations from "./getcandyhub/pages/settings/good_for/GoodForAssociations";
 
 Vue.use(HubUi)
 
@@ -93,6 +97,7 @@ Vue.component('channel-manager', ChannelManager)
 Vue.component('click-to-copy', ClickToCopy)
 Vue.component('code-block', CodeBlock)
 Vue.component('create-attribute', CreateAttribute)
+Vue.component('create-icon', CreateIcon)
 Vue.component('customer-group-manager', CustomerGroupManager)
 Vue.component('draft-tools', DraftTools)
 Vue.component('entry-sidebar', EntrySidebar)
@@ -299,6 +304,13 @@ export default async ({ app }, inject) => {
       ]
     })
 
+    app.$hooks.hook('products.associations.tabs', (items) => {
+      items.push({
+        title: 'Good for',
+        component: GoodForAssociations
+      })
+    })
+
 /**
  *import ReycleBinIndex from './getcandyhub/pages/recycle-bin/index.vue'
 import ReycleBinShow from './getcandyhub/pages/recycle-bin/_id.vue'
@@ -350,6 +362,16 @@ import HubIndex from './getcandyhub/pages/index.vue'
         path: '/settings/attributes/:id',
         name: 'settings-attributes-id',
         component: AttributesShow
+    },
+    {
+      path: '/settings/good-for',
+      name: 'settings-good-for',
+      component: GoodForIndex
+    },
+    {
+      path: '/settings/brand-management',
+      name: 'settings-brand-management',
+      component: BrandManagementShow
     },
     {
         path: '/users',

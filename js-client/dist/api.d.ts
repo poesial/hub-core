@@ -45,3 +45,4 @@ export * from './api/versioning-api';
 export * from './api/blogs-api';
 export * from './api/blog-families-api';
 export * from './api/contents-api';
+export * from './api/brand-management-api';

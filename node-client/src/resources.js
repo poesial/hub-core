@@ -35,6 +35,8 @@ import Versions from './resources/Versions'
 import Blogs from './resources/Blogs'
 import BlogFamilies from './resources/BlogFamilies'
 import OtherContents from './resources/OtherContents'
+import BrandManagement from "./resources/BrandManagement";
+import GoodFor from "./resources/GoodFor";
 
 export {
   ActivityLog,
@@ -71,7 +73,9 @@ export {
   Versions,
   Blogs,
   BlogFamilies,
-  OtherContents
+  OtherContents,
+  BrandManagement,
+  GoodFor
 }
 
 // module.exports = {

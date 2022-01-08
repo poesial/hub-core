@@ -12,6 +12,7 @@ export default function (_moduleOptions) {
 
   const templates = [
     // Form components
+    'components/forms/CreateIcon.vue',
     'components/forms/CreateAttribute.vue',
     'components/forms/ExternalAssetUploader.vue',
     'components/forms/FormField.vue',
@@ -107,6 +108,9 @@ export default function (_moduleOptions) {
     'pages/settings/api/_handle.vue',
     'pages/settings/attribute-groups/_id.vue',
     'pages/settings/attribute-groups/index.vue',
+    'pages/settings/good_for/index.vue',
+    'pages/settings/good_for/GoodForAssociations.vue',
+    'pages/settings/brand/management.vue',
     'pages/settings/attributes/_id.vue',
     'pages/settings/attributes/index.vue',
     'pages/recycle-bin/index.vue',

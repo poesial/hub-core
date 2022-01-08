@@ -9,6 +9,7 @@ const defaultIncludes = Array([
   'categories.routes',
   'blogs.assets.transforms',
   'blogs.routes',
+  'goodForIcons',
   'channels',
   'collections',
   'collections.routes',

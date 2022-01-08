@@ -12,6 +12,25 @@
           </div>
         </div>
 
+        <div>
+          <header class="font-bold uppercase text-gray-500 text-xs pt-6 mb-4 px-6">
+            {{ $t('Good for') }}
+          </header>
+          <div class="text-sm font-medium">
+            <nuxt-link :to="{ name: 'settings-good-for' }" active-class="bg-white text-gray-800 border-purple-500 border-r-4"  class="block px-6 py-4 text-gray-700 hover:text-gray-800 hover:bg-white">{{ $t('Good for Icons') }}</nuxt-link>
+          </div>
+        </div>
+
+        <div>
+          <header class="font-bold uppercase text-gray-500 text-xs pt-6 mb-4 px-6">
+            {{ $t('Brand') }}
+          </header>
+          <div class="text-sm font-medium">
+            <nuxt-link :to="{ name: 'settings-brand-management' }" active-class="bg-white text-gray-800 border-purple-500 border-r-4"  class="block px-6 py-4 text-gray-700 hover:text-gray-800 hover:bg-white">{{ $t('Brand Management') }}</nuxt-link>
+          </div>
+        </div>
+
+
         <div v-for="(section, index) in additionalSections" :key="index">
           <header class="font-bold uppercase text-gray-500 text-xs pt-6 mb-4 px-6">
             {{ $t(section.title) }}
